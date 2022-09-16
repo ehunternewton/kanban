@@ -9,7 +9,10 @@ function AddTask(props) {
   const [show, setShow] = useState(false);
   const [newTask, setNewTask] = useState('');
 
-  const { postData } = useFetch('http://localhost:3000/tasks', 'POST')
+  const url = 'http://localhost:3000/tasks'
+  const { postData } = useFetch(url, 'POST')
+  
+  // console.log(data)
  
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -17,7 +20,7 @@ function AddTask(props) {
   const handleSubmit = (e) => {
     e.preventDefault()
     postData({ status: props.taskStatus, description: newTask })
-    console.log(newTask)
+    props.setRefetch(true)
     handleClose()
   }
 

@@ -1,37 +1,9 @@
 {
   "tasks": [
     {
-      "id": "1",
       "status": "ToDo",
-      "description": "take the dogs for a walk"
-    },
-    {
-      "id": "2",
-      "status": "ToDo",
-      "description": "make dinner"
-    },
-    {
-      "id": "3",
-      "status": "In Progress",
-      "description": "build kanban board"
-    },
-    {
-      "id": "4",
-      "status": "Completed",
-      "description": "learn react"
-    },
-    {
-      "description": "eat dinner",
-      "id": "odk6Bca"
-    },
-    {
-      "description": "eat dinner",
-      "id": "fcTb8vd"
-    },
-    {
-      "status": "ToDo",
-      "description": "asdf",
-      "id": "CuFpymc"
+      "description": "implement drag and drop functionallity",
+      "id": 1
     }
   ]
 }

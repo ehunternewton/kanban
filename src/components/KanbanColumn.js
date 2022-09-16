@@ -6,6 +6,8 @@ import Card from 'react-bootstrap/Card';
 import Tasks from './Tasks'
 import AddTask from './AddTask';
 
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+
 function KanbanColumn(props) {
   return (
     <>
@@ -16,8 +18,9 @@ function KanbanColumn(props) {
               </Card.Header>
               <Card.Body className='d-flex flex-column'>
                 {/* Todo Tasks Here */}
-                <Tasks columnStatus={props.columnStatus} tasks={props.tasks}/>
-                <AddTask taskStatus={props.columnStatus} />
+                {/* <Droppable droppableId={props.columnStatus}></Droppable> */}
+                <Tasks setRefetch={props.setRefetch} columnStatus={props.columnStatus} tasks={props.tasks}/>
+                <AddTask setRefetch={props.setRefetch} taskStatus={props.columnStatus} setTasks={props.setTasks}/>
               </Card.Body>
             </Card>
           </Col>

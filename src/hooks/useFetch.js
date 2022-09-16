@@ -28,7 +28,7 @@ export const useFetch = (url, method = "GET") => {
           throw new Error(res.statusText)
         }
         const data = await res.json()
-
+        
         setIsPending(false)
         setData(data)
         setError(null)
